@@ -41,7 +41,7 @@ def zero_state_dict_like(source):
 def partition_data(option='iid', min_require_size=10, num_labels=10, y_train=None, n_parties=100, beta=0.5):
     min_size = 0
     num_data = len(y_train)
-    np.random.seed(2021)
+    np.random.seed(2024)
     net_dataidx_map = {}
 
     if option == 'iid':
@@ -94,7 +94,7 @@ def partition_data(option='iid', min_require_size=10, num_labels=10, y_train=Non
         # revised from https://github.com/Xtra-Computing/NIID-Bench/blob/main/utils.py
         min_size = 0
         num_data = y_train.shape[0]
-        np.random.seed(2021)
+        np.random.seed(2024)
         net_dataidx_map = {}
 
         while min_size < min_require_size:

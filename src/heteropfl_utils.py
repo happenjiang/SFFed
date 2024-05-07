@@ -33,7 +33,7 @@ def args_parser():
     ### FL-related paprams ###
     parser.add_argument('--c', type=float, default=1,
                         help='Fraction of participating clients at each communication round (default: 0.1)')
-    parser.add_argument('--max_rounds', type=int, default=100)#1000
+    parser.add_argument('--max_rounds', type=int, default=50)#1000
     parser.add_argument('--local_epochs', type=int, default=1)
     parser.add_argument('--virtual_per_node', type=int, default=2,
                         help='how many virtual nodes to iterate in each mpi process (default: 1)')
@@ -50,7 +50,7 @@ def args_parser():
                         help='whether to save logs (False for debug & test, default: False)')
     parser.add_argument('--multistep', type=str, default='',
                         help='lr annealing schedule for multiple rounds e.g. 100,300, (default: )')
-    parser.add_argument('--seed', type=int, default=2021)
+    parser.add_argument('--seed', type=int, default=2024)
     parser.add_argument('--tsne', action='store_true')
     return parser.parse_args()
 
